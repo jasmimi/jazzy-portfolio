@@ -6,6 +6,11 @@
   --accent: #be6d4a;
   --accent-soft: #f5d8c8;
   --line: #eadfcb;
+  --desk-plank-a: #9b6641;
+  --desk-plank-b: #8a5936;
+  --desk-plank-c: #7c4f31;
+  --paper-strip: #f4e3c7;
+  --paper-rule: rgba(162, 138, 102, 0.28);
 }
 
 * {
@@ -13,12 +18,54 @@
 }
 
 .app-shell {
+  position: relative;
+  isolation: isolate;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 10% 0%, #ffe6d5 0, transparent 42%),
-    radial-gradient(circle at 85% 5%, #ffdcb8 0, transparent 35%),
-    var(--bg);
+    linear-gradient(270deg, rgba(255, 247, 234, 0.1), rgba(45, 24, 10, 0.18)),
+    repeating-linear-gradient(
+      0deg,
+      var(--desk-plank-a) 0 118px,
+      #73492d 118px 122px,
+      var(--desk-plank-b) 122px 252px,
+      #6e442a 252px 256px,
+      var(--desk-plank-c) 256px 402px,
+      #70472c 402px 406px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.035) 0 2px,
+      rgba(0, 0, 0, 0.045) 2px 4px,
+      transparent 4px 11px
+    );
   color: var(--ink);
+}
+
+.app-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 50%;
+  transform: translateX(-50%);
+  width: min(1160px, calc(100% - 20px));
+  background:
+    linear-gradient(
+      90deg,
+      rgba(120, 92, 57, 0.22) 0,
+      rgba(120, 92, 57, 0.08) 26px,
+      rgba(120, 92, 57, 0.08) calc(100% - 26px),
+      rgba(120, 92, 57, 0.22) 100%
+    ),
+    repeating-linear-gradient(
+      180deg,
+      transparent 0 34px,
+      var(--paper-rule) 34px 35px
+    ),
+    linear-gradient(180deg, #f8ebd2 0%, var(--paper-strip) 100%);
+  box-shadow:
+    0 0 0 1px rgba(135, 101, 63, 0.22),
+    0 0 44px rgba(43, 24, 12, 0.2);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .topbar {
@@ -30,9 +77,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 16px 24px;
+  padding: 16px 300px 24px 300px;
   border-bottom: 1px solid var(--line);
-  background-color: rgba(255, 249, 242, 0.9);
+  background-color: rgba(244, 227, 199, 1);
   backdrop-filter: blur(6px);
 }
 
@@ -69,6 +116,8 @@
 }
 
 .content-wrap {
+  position: relative;
+  z-index: 1;
   width: min(1080px, 100% - 32px);
   margin: 28px auto 48px;
 }
