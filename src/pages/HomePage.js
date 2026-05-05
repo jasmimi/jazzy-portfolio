@@ -14,17 +14,17 @@ function HomePage() {
         <h2>Beyond the screen</h2>
         <p>
           I like to be a full and well-rounded person. When I'm not losing my eyesight staring at a screen, the following activities keep me busy:
-          <ul>
-            <li>Reading books: I'm a very active Auckland City Council Libraries member</li>
-            <li>Enjoying live music: I like to support the local arts</li>
-            <li>Gymming: I am also a very active CityFitness member, despite receiving several payment failed emails from them in the past years</li>
-            <li>Journalling: Since I was 16! If we hang out, and I don't take any small souvenir to stick in my junk journal... it's bad news for us</li>
-            <li>Instant film: The most expensive form of wallpaper, but these create lifetime memories</li>
-            <li>GoPro Summer Montages: A traditional that I've trapped myself in to. Spread among Facebook and Instagram are videos of my Summer adventures from the ripe age of 16. 16 year old Jaz knew what was up</li>
-            <li>Walking in the New Zealand bush: Good news is that there is a lot of it. This hobby is growing as a result of low finances and the desire to explore my country some more</li>
-            <li>Swimming in the ocean: The ocean heals all. Unless it's been raining heavily recently. Or you live near Moa Point.</li>
-          </ul>
         </p>
+        <ul>
+          <li>Reading books: I'm a very active Auckland City Council Libraries member</li>
+          <li>Enjoying live music: I like to support the local arts</li>
+          <li>Gymming: I am also a very active CityFitness member, despite receiving several payment failed emails from them in the past years</li>
+          <li>Journalling: Since I was 16! If we hang out, and I don't take any small souvenir to stick in my junk journal... it's bad news for us</li>
+          <li>Instant film: The most expensive form of wallpaper, but these create lifetime memories</li>
+          <li>GoPro Summer Montages: A traditional that I've trapped myself in to. Spread among Facebook and Instagram are videos of my Summer adventures from the ripe age of 16. 16 year old Jaz knew what was up</li>
+          <li>Walking in the New Zealand bush: Good news is that there is a lot of it. This hobby is growing as a result of low finances and the desire to explore my country some more</li>
+          <li>Swimming in the ocean: The ocean heals all. Unless it's been raining heavily recently. Or you live near Moa Point.</li>
+        </ul>
 
       </div>
 
