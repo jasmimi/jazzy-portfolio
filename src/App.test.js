@@ -28,12 +28,12 @@ beforeEach(() => {
   window.history.replaceState(null, '', '/');
 });
 
-test('renders WIP bookshelf with disabled page books by default', () => {
+test('renders live bookshelf with enabled page books by default', () => {
   render(<App />);
 
-  expect(screen.getByTestId('bookshelf-scene')).toHaveAttribute('data-wip-mode', 'true');
-  expect(screen.getByText(/warning tape/i)).toBeInTheDocument();
-  expect(screen.getByRole('button', { name: /home/i })).toBeDisabled();
+  expect(screen.getByTestId('bookshelf-scene')).toHaveAttribute('data-wip-mode', 'false');
+  expect(screen.queryByText(/warning tape/i)).not.toBeInTheDocument();
+  expect(screen.getByRole('button', { name: /home/i })).toBeEnabled();
   expect(screen.queryByTestId('page-reader')).not.toBeInTheDocument();
 });
 
