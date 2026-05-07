@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import './App.css';
-import BookshelfScene from './components/BookshelfScene';
+import PixelBookNook from './components/PixelBookNook';
 import HomePage from './pages/HomePage';
 import JazSpottingsPage from './pages/JazSpottingsPage';
 import InsideJazMindPage from './pages/InsideJazMindPage';
@@ -24,7 +24,7 @@ const routeItems = [
     lean: 1,
   },
   {
-    label: 'Inside Jazs Mind',
+    label: "Inside Jaz's Mind",
     path: '/inside-jazs-mind',
     component: InsideJazMindPage,
     color: '#6e6232',
@@ -50,9 +50,14 @@ function getRouteFromHash() {
   return routes[path] ? path : null;
 }
 
-function App({ readerDelayMs = 650, wipMode = isWipMode }) {
-  const [selectedPath, setSelectedPath] = useState(() => (wipMode ? null : getRouteFromHash()));
-  const [readerPath, setReaderPath] = useState(null);
+function App({ wipMode = isWipMode }) {
+  const [selectedPath, setSelectedPath] = useState(() => {
+    if (wipMode) {
+      return null;
+    }
+
+    return getRouteFromHash() || '/';
+  });
 
   useEffect(() => {
     if (wipMode) {
@@ -61,7 +66,7 @@ function App({ readerDelayMs = 650, wipMode = isWipMode }) {
     }
 
     const handleHashChange = () => {
-      setSelectedPath(getRouteFromHash());
+      setSelectedPath(getRouteFromHash() || '/');
     };
 
     window.addEventListener('hashchange', handleHashChange);
@@ -71,31 +76,15 @@ function App({ readerDelayMs = 650, wipMode = isWipMode }) {
     };
   }, [wipMode]);
 
-  useEffect(() => {
-    if (!selectedPath || wipMode) {
-      setReaderPath(null);
-      return undefined;
-    }
-
-    setReaderPath(null);
-    const openTimer = window.setTimeout(() => {
-      setReaderPath(selectedPath);
-    }, readerDelayMs);
-
-    return () => {
-      window.clearTimeout(openTimer);
-    };
-  }, [readerDelayMs, selectedPath, wipMode]);
-
   const ActivePage = useMemo(() => {
-    if (!readerPath) {
+    if (!selectedPath || wipMode) {
       return null;
     }
 
-    return routes[readerPath]?.component || null;
-  }, [readerPath]);
+    return routes[selectedPath]?.component || null;
+  }, [selectedPath, wipMode]);
 
-  const handleSelectBook = (path) => {
+  const handleSelectRoute = (path) => {
     if (wipMode || !routes[path]) {
       return;
     }
@@ -109,7 +98,6 @@ function App({ readerDelayMs = 650, wipMode = isWipMode }) {
 
   const handleCloseReader = () => {
     setSelectedPath(null);
-    setReaderPath(null);
 
     if (window.location.hash) {
       window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
@@ -118,22 +106,17 @@ function App({ readerDelayMs = 650, wipMode = isWipMode }) {
 
   return (
     <div className="app-shell">
-      <BookshelfScene
-        books={routeItems}
-        onSelectBook={handleSelectBook}
+      <PixelBookNook
+        onSelectRoute={handleSelectRoute}
+        routes={routeItems}
         selectedPath={selectedPath}
         wipMode={wipMode}
       />
 
-      <header className="site-mark" aria-label="Site identity">
-        <p>Jasmine Amohia</p>
-        {wipMode && <span className="status-pill">WIP</span>}
-      </header>
-
       {ActivePage && (
         <aside className="page-reader" data-testid="page-reader">
           <button className="reader-close" onClick={handleCloseReader} type="button">
-            Close
+            Minimize
           </button>
           <ActivePage />
         </aside>
