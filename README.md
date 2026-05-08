@@ -1,5 +1,12 @@
 # Getting Started with Create React App
 
+TO-DO:
+- fix book open animation
+- open page border radius
+- make faster to load
+- load on GH
+- add books to top? projects?
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

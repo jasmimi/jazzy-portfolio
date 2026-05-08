@@ -4,7 +4,8 @@ import insideJazMind from '../data/insideJazMind.json';
 function InsideJazMindPage() {
   return (
     <PostFeed
-      title="Inside Jazs Mind"
+      title="Inside Jaz's Mind"
+      intro="Brain dumps, reflections, and thoughts that needed somewhere softer than a notes app."
       posts={insideJazMind}
     />
   );

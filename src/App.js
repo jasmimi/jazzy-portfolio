@@ -1,35 +1,81 @@
 import { useEffect, useMemo, useState } from 'react';
 import './App.css';
+import PixelBookNook from './components/PixelBookNook';
 import HomePage from './pages/HomePage';
 import JazSpottingsPage from './pages/JazSpottingsPage';
 import InsideJazMindPage from './pages/InsideJazMindPage';
+import OthersMindsPage from './pages/OthersMindsPage';
+import { isWipMode } from './siteConfig';
 
-const routes = {
-  '/': HomePage,
-  '/jaz-spottings': JazSpottingsPage,
-  '/inside-jazs-mind': InsideJazMindPage,
-};
+const routeItems = [
+  {
+    label: 'Home',
+    path: '/',
+    component: HomePage,
+    color: '#276f73',
+    shadowColor: '#174449',
+    lean: -1.5,
+  },
+  {
+    label: 'Jaz Spottings',
+    path: '/jaz-spottings',
+    component: JazSpottingsPage,
+    color: '#a84f3d',
+    shadowColor: '#6f3027',
+    lean: 1,
+  },
+  {
+    label: "Inside Jaz's Mind",
+    path: '/inside-jazs-mind',
+    component: InsideJazMindPage,
+    color: '#6e6232',
+    shadowColor: '#403a1f',
+    lean: -0.8,
+  },
+  {
+    label: "Others' Minds",
+    path: '/others-minds',
+    component: OthersMindsPage,
+    color: '#4f6459',
+    shadowColor: '#2b372e',
+    lean: 0.8,
+  },
+];
+
+const routes = routeItems.reduce((routeMap, route) => {
+  routeMap[route.path] = route;
+  return routeMap;
+}, {});
 
 function getRouteFromHash() {
   const raw = window.location.hash.replace('#', '');
 
   if (!raw) {
-    return '/';
+    return null;
   }
 
-  return raw.startsWith('/') ? raw : `/${raw}`;
+  const path = raw.startsWith('/') ? raw : `/${raw}`;
+
+  return routes[path] ? path : null;
 }
 
-function App() {
-  const [currentPath, setCurrentPath] = useState(getRouteFromHash());
+function App({ wipMode = isWipMode }) {
+  const [selectedPath, setSelectedPath] = useState(() => {
+    if (wipMode) {
+      return null;
+    }
+
+    return getRouteFromHash() || '/';
+  });
 
   useEffect(() => {
-    if (!window.location.hash) {
-      window.location.hash = '/';
+    if (wipMode) {
+      setSelectedPath(null);
+      return undefined;
     }
 
     const handleHashChange = () => {
-      setCurrentPath(getRouteFromHash());
+      setSelectedPath(getRouteFromHash() || '/');
     };
 
     window.addEventListener('hashchange', handleHashChange);
@@ -37,36 +83,53 @@ function App() {
     return () => {
       window.removeEventListener('hashchange', handleHashChange);
     };
-  }, []);
+  }, [wipMode]);
 
-  const ActivePage = useMemo(() => routes[currentPath] || HomePage, [currentPath]);
+  const ActivePage = useMemo(() => {
+    if (!selectedPath || wipMode) {
+      return null;
+    }
 
-  const navItems = [
-    { label: 'Home', path: '/' },
-    { label: 'Jaz Spottings', path: '/jaz-spottings' },
-    { label: 'Inside Jazs Mind', path: '/inside-jazs-mind' },
-  ];
+    return routes[selectedPath]?.component || null;
+  }, [selectedPath, wipMode]);
+
+  const handleSelectRoute = (path) => {
+    if (wipMode || !routes[path]) {
+      return;
+    }
+
+    setSelectedPath(path);
+
+    if (window.location.hash !== `#${path}`) {
+      window.location.hash = path;
+    }
+  };
+
+  const handleCloseReader = () => {
+    setSelectedPath(null);
+
+    if (window.location.hash) {
+      window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+    }
+  };
 
   return (
     <div className="app-shell">
-      <header className="topbar">
-        <div className="brand">Jasmine Amohia</div>
-        <nav aria-label="Main navigation" className="topnav">
-          {navItems.map((item) => (
-            <a
-              className={item.path === currentPath ? 'nav-link active' : 'nav-link'}
-              href={`#${item.path}`}
-              key={item.path}
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-      </header>
+      <PixelBookNook
+        onSelectRoute={handleSelectRoute}
+        routes={routeItems}
+        selectedPath={selectedPath}
+        wipMode={wipMode}
+      />
 
-      <main className="content-wrap">
-        <ActivePage />
-      </main>
+      {ActivePage && (
+        <aside className="page-reader" data-testid="page-reader">
+          <button className="reader-close" onClick={handleCloseReader} type="button">
+            Minimize
+          </button>
+          <ActivePage />
+        </aside>
+      )}
     </div>
   );
 }
