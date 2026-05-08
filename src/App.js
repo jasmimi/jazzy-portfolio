@@ -4,6 +4,7 @@ import PixelBookNook from './components/PixelBookNook';
 import HomePage from './pages/HomePage';
 import JazSpottingsPage from './pages/JazSpottingsPage';
 import InsideJazMindPage from './pages/InsideJazMindPage';
+import OthersMindsPage from './pages/OthersMindsPage';
 import { isWipMode } from './siteConfig';
 
 const routeItems = [
@@ -30,6 +31,14 @@ const routeItems = [
     color: '#6e6232',
     shadowColor: '#403a1f',
     lean: -0.8,
+  },
+  {
+    label: "Others' Minds",
+    path: '/others-minds',
+    component: OthersMindsPage,
+    color: '#4f6459',
+    shadowColor: '#2b372e',
+    lean: 0.8,
   },
 ];
 

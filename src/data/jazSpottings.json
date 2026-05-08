@@ -1,34 +1,50 @@
 [
   {
     "id": "summer-of-tech-panel-1",
-    "title": "",
-    "date": "",
+    "title": "SoT Meet and Greet Pro-Tips Panellist",
+    "date": "05/09/2024",
     "text": "",
-    "imagePath": "",
-    "imageAlt": ""
+    "imagePath": "assets/images/sot-mag-pro-tips-panel.png",
+    "imageAlt": "Summer of Tech Meet and Greet Pro-Tips Panel as a panellist"
+  },
+  {
+    "id": "te-hapori-matihiko-awards",
+    "title": "Te Hapori Matihiko Awards Daniel Karehana Memorial Scholarship Recipient",
+    "date": "22/06/2024",
+    "text": "",
+    "imagePath": "assets/images/te-hapori-matihiko-awards.jpg",
+    "imageAlt": "Te Hapori Matihiko Awards Daniel Karehana Memorial Scholarship Recipient"
   },
   {
     "id": "digital-navigators",
-    "title": "",
-    "date": "",
+    "title": "Digtal Navigators Pannelist",
+    "date": "12/08/2025",
     "text": "",
-    "imagePath": "",
-    "imageAlt": ""
+    "imagePath": "assets/images/digital-navigators.png",
+    "imageAlt": "Digital Navigators Panel as a panellist"
   },
   {
     "id": "summer-of-tech-panel-2",
-    "title": "",
-    "date": "",
+    "title": "SoT Meet and Greet Pro-Tips Facilitator",
+    "date": "03/09/2025",
     "text": "",
-    "imagePath": "",
-    "imageAlt": ""
+    "imagePath": "assets/images/sot-mag-pro-tips-facil.png",
+    "imageAlt": "Summer of Tech Meet and Greet Pro-Tips Panel as a facilitator"
   },
-    {
-    "id": "summer-of-tech-quick-chats",
-    "title": "",
-    "date": "",
+  {
+    "id": "aut-beyond-networking",
+    "title": "AUT Beyond Networking",
+    "date": "29/04/2026",
     "text": "",
-    "imagePath": "",
-    "imageAlt": ""
+    "imagePath": "assets/images/aut-beyond-networking.jpg",
+    "imageAlt": "AUT Beyond Networking event as an industry professional"
+  },
+  {
+    "id": "summer-of-tech-alumni-career-chats",
+    "title": "SoT Alumni Career Chats",
+    "date": "08/05/2026",
+    "text": "",
+    "imagePath": "assets/images/sot-alumni-career-chat.png",
+    "imageAlt": "My own Summer of Tech Alumni Career Chat event"
   }
 ]

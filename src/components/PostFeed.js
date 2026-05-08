@@ -1,3 +1,11 @@
+function getPostLinkLabel(link, linkLabel) {
+  if (linkLabel) {
+    return linkLabel;
+  }
+
+  return /youtube\.com|youtu\.be|vimeo\.com/i.test(link) ? 'Watch video' : 'Open link';
+}
+
 function PostFeed({ title, intro, posts }) {
   return (
     <section className="page-section">
@@ -16,6 +24,11 @@ function PostFeed({ title, intro, posts }) {
               <h2>{post.title || 'Untitled'}</h2>
               {post.date && <p className="post-date">{post.date}</p>}
               {post.text && <p>{post.text}</p>}
+              {post.link && (
+                <a className="post-link" href={post.link} target="_blank" rel="noreferrer">
+                  {getPostLinkLabel(post.link, post.linkLabel)}
+                </a>
+              )}
             </div>
           </article>
         ))}

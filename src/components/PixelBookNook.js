@@ -28,18 +28,27 @@ function PixelBookNook({ routes, selectedPath, onSelectRoute, wipMode }) {
       <section className="nook-intro" aria-labelledby="site-title">
         <div className="intro-copy">
           <PixelBow />
-          <p className="kicker">Jaz's digital book nook</p>
+          <p className="kicker">Welcome to the digital book nook of...</p>
           <h1 id="site-title">Jasmine Amohia</h1>
           <p>
-            A soft little corner for brain dumps, library energy, local arts spottings, and the
-            parts of life worth sticking into a journal.
+            My corner of the internet for however long Github wishes to freely support it. 
+            Learn about where I've been, what I'm thinking, and others thoughts that I'm enjoying.
           </p>
         </div>
 
         <div className="library-card" aria-label="Reading note">
-          <p className="card-label">Library card</p>
-          <p className="card-title">Currently shelved</p>
-          <p>Reading, journalling, walking, swimming, and collecting tiny souvenirs from the day.</p>
+          <p className="card-label">Thursay 21st May, 2026</p>
+          <p className="card-title">Air New Zealands Tech Week Showcase and Panel</p>
+          <p>
+            In my first stint in AirNZ's Women in Digital Network, my coworker Manasija
+            and I are hosting a Techweek event in our Auckland City office.&nbsp;
+            <a
+              href="https://events.humanitix.com/tech-week-airnz-digital-showcase-and-panel"
+              target="_blank"
+              rel="noopener noreferrer">
+                  Read more here
+            </a>
+          </p>
         </div>
       </section>
 

@@ -7,7 +7,7 @@ function HomePage() {
           Kia ora! Welcome to my corner of the internet. When Instagram Reels taught me that
           static websites can be freely deployed on GitHub, I felt compelled to give it a go. I
           learned that very employable people in tech have blogs and finished personal projects.
-          Sounds ambitious, but I'm having a go. Enjoy my brain dumps.
+          Sounds ambitious, but I'm giving a go. Enjoy my brain dumps.
         </p>
       </header>
 
@@ -58,11 +58,16 @@ function HomePage() {
         <h2>Where I've been</h2>
         <p>
           I was very luckily born in Wellington, New Zealand. If there's a city-equivalent to
-          patriotic, that's me. Although, I've ended up in Tamaki Makaurau Auckland! After 13 years
-          of schooling at Miramar Central School, Evans Bay Intermediate School, and Wellington East
-          Girls' College, I relocated to Auckland to study. Through AUT, I completed a Bachelor of
+          patriotic, that's me. Although, I've ended up in Tamaki Makaurau Auckland! 
+        </p>
+        <p>
+          After 13 years of schooling at Miramar Central School, Evans Bay Intermediate School, and Wellington East
+          Girls' College, I relocated to Auckland to study. Through AUT in December 2025, I completed a Bachelor of
           Engineering (Honours) majoring in Software Engineering and minoring in Artificial
-          Intelligence. I gratefully interned as a Data Engineer at Spark (Summer 22/23), an
+          Intelligence. 
+        </p>
+        <p>
+          I gratefully interned as a Data Engineer at Spark (Summer 22/23), an
           Application Developer at Treasury (Summer 23/24), and a Software Engineer at Immersve
           (Summer 24/25). I'm currently working as a Microservices Engineer at Araraurangi Air New
           Zealand through their ELEVATE Digital Graduate programme.
@@ -73,13 +78,17 @@ function HomePage() {
         <p>Made by Jasmine Amohia.</p>
         <ul>
           <li>
-            <a href="https://github.com/jasmineamohia" target="_blank" rel="noopener noreferrer">
+            <a 
+              href="https://github.com/jasmimi"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               GitHub
             </a>
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/jasmineamohia/"
+              href="https://www.linkedin.com/in/jasmine-amohia-8526511b8"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -87,8 +96,30 @@ function HomePage() {
             </a>
           </li>
           <li>
-            <a href="mailto:jasmine_amohia@hotmail.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="mailto:jasmine_amohia@hotmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Email
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.goodreads.com/user/show/35718497-jasmine-amohia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Goodreads
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://letterboxd.com/jasmimi/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Letterboxd
             </a>
           </li>
         </ul>

@@ -1,0 +1,20 @@
+[
+  {
+    "id" : "grant-mclean-so-you-want-to-be-a-developer",
+    "title" : "Grant McLean - So You Want To Be A Developer? WITcon 2018",
+    "link" : "https://www.youtube.com/watch?v=S-hcnSFnWXc",
+    "text" : "A concise and casual talk with Grant McLean which introduces interesting concepts with a very warm and welcoming approach. His discussion of Type F and J programmers has resonated with me deeply, inspiring one of my own recent talks. I've enjoyed sharing his principle with many others."
+  },
+  {
+    "id" : "software-fundamentals-matter-more-than-ever-matt-pocock",
+    "title" : "\"Software Fundamentals Matter More Than Ever\" — Matt Pocock",
+    "link" : "https://www.youtube.com/watch?v=v4F1gFy-hqg",
+    "text" : "In an uncertain time where people are unsure what to learn (or if to continue learning in this field at all), Matt brings us back to the grounding foundations. What began as important, and what will remain to be important."
+  },
+  {
+    "id" : "laid-off-after-25-years-in-tech",
+    "title" : "Laid Off After 25 Years in Tech: The Anxiety, Sacrifice, and Reality No One Talks About",
+    "link" : "https://www.youtube.com/watch?v=VeMA9WGKxOg",
+    "text" : "An insightful talk that reinstates the importance of constant curiosity and adaption, treasuring your moments outside of work, and remembering that corporations are ultimately just corportations."
+  }
+]
