@@ -1,11 +1,13 @@
-# Getting Started with Create React App
+# Jazzys First Portfolio
+It's about time that I invest in one of these, and what better place to FREELY host than on here? :D
 
 TO-DO:
-- fix book open animation
-- open page border radius
-- make faster to load
-- load on GH
-- add books to top? projects?
+- [] write spottings captions
+- [x] json to line break formatting
+- [x] macrons where needed
+- [x] svgs
+
+# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

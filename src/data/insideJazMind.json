@@ -1,10 +1,26 @@
 [
   {
+    "id": "chat-gpt-pro-license",
+    "title": "ChatGPT Pro License",
+    "date": "09/05/2026",
+    "text": "A Codex training session took place at my work, facilitated by a small team of OpenAI employees. As the final part of the session, employees were encouraged to use Codex to create something to demo in the same session. I was one of the lucky few who were able to demo, and we were all rewarded with a free ChatGPT Pro license for 3 months. I'm excited to explore the possibilities of this tool, and to see how it can enhance my work and creativity.\nIf my next 3 months aren't represented by bright green squares on Github... there's a problem.",
+    "imagePath": "assets/images/tinker.png",
+    "imageAlt": "Dominic Alves \"Tinker's Hardware Shop\""
+  },
+  {
     "id": "challenging-myself",
     "title": "Challenging myself",
-    "date": "",
-    "text": "",
-    "imagePath": "",
-    "imageAlt": ""
+    "date": "09/05/2026",
+    "text": "I'm constantly surrounded by people with an impressive drive, curiosity, passion, and success. This first used to startle me, but I'm trying to see it through a motivational lens. I have a lot of unfinished projects, and a few hobbies that I started exploring... but haven't gone deeply into many of them. I know that I perform well generally, but I want to excel in EVERYTHING.\nThe smartest way to go about this desire to change and improve is to focus on one thing at a time. As someone who likes to be able to swap between tasks, I'm going to categorise my goals into 3 categories: Academic, Skillful, and Physical.\nFor the Academic category, I've enrolled in HarvardXs free (audit) course for 'Bioethics: The Law, Medicine, and Ethics of Reproductive Technologies and Genetics'. There were so many interesting (and FREE) courses, it was overwhelming\nFor the Skillful category, I'm going to invest more time into learning how to mix. One of my yet-to-be-tested Github projects is a hot cues automation script, removing the manual prerequisite which normally deters me from using my controller.\nFor the Physical category, I want to hit an 115kg squat. I've hit 110kg for a single rep on two occasions, so this is the next natural progression.\nI'm going to revisit these goals twice - once in a month as a check-in, and once in 2 months as a hopeful completion. Calendar events are set. Lock in time :)",
+    "imagePath": "assets/images/goal.png",
+    "imageAlt": "Paisley Scotland \"Goal\""
+  },
+  {
+    "id": "free-harvard-courses",
+    "title": "Free Harvard Courses That I Find Great Interest In",
+    "date": "09/05/2026",
+    "text": "- Justice Today: Money, Markets, and Morals (edX)\n- The Health Effects of Climate Change\n- Fundamentals of Neuroscience, Part 1: The Electrical Properties of the Neuron\n- The Path to Happiness: What Chinese Philosophy Teaches Us about the Good Life\n- Managing Happiness\n- Contract Law: From Trust to Promise to Contract\n- Super-Earths and Life\n- Backyard Meteorology: The Science of Weather\n- Bioethics: The Law, Medicine, and Ethics of Reproductive Technologies and Genetics - May 2026\n- CitiesX: The Past, Present and Future of Urban Life",
+    "imagePath": "assets/images/study.jpg",
+    "imageAlt": "Brian Donovan \"A Quiet Study\""
   }
 ]
