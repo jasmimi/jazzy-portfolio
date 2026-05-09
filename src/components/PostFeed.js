@@ -23,7 +23,7 @@ function PostFeed({ title, intro, posts }) {
             <div className="post-content">
               <h2>{post.title || 'Untitled'}</h2>
               {post.date && <p className="post-date">{post.date}</p>}
-              {post.text && <p>{post.text}</p>}
+              {post.text && <p className="post-text">{post.text}</p>}
               {post.link && (
                 <a className="post-link" href={post.link} target="_blank" rel="noreferrer">
                   {getPostLinkLabel(post.link, post.linkLabel)}

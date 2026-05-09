@@ -5,7 +5,7 @@ function InsideJazMindPage() {
   return (
     <PostFeed
       title="Inside Jaz's Mind"
-      intro="Brain dumps, reflections, and thoughts that needed somewhere softer than a notes app."
+      intro="Brain dumps, reflections, and thoughts in a published notes app. Accompanied by photos of my own or from Creative Commons sources."
       posts={insideJazMind}
     />
   );

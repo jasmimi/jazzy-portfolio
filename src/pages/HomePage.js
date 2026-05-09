@@ -4,16 +4,16 @@ function HomePage() {
       <header className="section-header">
         <h1>Home</h1>
         <p>
-          Kia ora! Welcome to my corner of the internet. When Instagram Reels taught me that
-          static websites can be freely deployed on GitHub, I felt compelled to give it a go. I
-          learned that very employable people in tech have blogs and finished personal projects.
-          Sounds ambitious, but I'm giving a go. Enjoy my brain dumps.
+          When Instagram Reels taught me that static websites can be freely deployed
+          on GitHub, I felt compelled to give it a go. I learned that very employable
+          people in tech have blogs and finished personal projects. Sounds ambitious,
+          but I'm giving a go. Enjoy.
         </p>
       </header>
 
       <div className="reading-note">
         <p className="note-label">Reading status</p>
-        <h2>Active Auckland Libraries member</h2>
+        <h2>Active Jaz Libraries member</h2>
         <p>
           My ideal website should feel a bit like a borrowed book, a journal page, and a tiny
           shelf of things I keep meaning to tell people about.
@@ -58,7 +58,7 @@ function HomePage() {
         <h2>Where I've been</h2>
         <p>
           I was very luckily born in Wellington, New Zealand. If there's a city-equivalent to
-          patriotic, that's me. Although, I've ended up in Tamaki Makaurau Auckland! 
+          patriotic, that's me. Although, I've ended up in T&#x0101;maki Makaurau Auckland! 
         </p>
         <p>
           After 13 years of schooling at Miramar Central School, Evans Bay Intermediate School, and Wellington East

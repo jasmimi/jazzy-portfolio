@@ -560,6 +560,10 @@ textarea {
   margin: 0;
 }
 
+.post-text {
+  white-space: pre-line;
+}
+
 .post-link {
   display: inline-flex;
   align-items: center;
