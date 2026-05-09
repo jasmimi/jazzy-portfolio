@@ -106,7 +106,7 @@ function HomePage() {
           </li>
           <li>
             <a
-              href="https://www.goodreads.com/user/show/35718497-jasmine-amohia"
+              href="https://www.goodreads.com/user/show/165270565"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -115,7 +115,7 @@ function HomePage() {
           </li>
           <li>
             <a
-              href="https://letterboxd.com/jasmimi/"
+              href="https://boxd.it/jaB13"
               target="_blank"
               rel="noopener noreferrer"
             >
