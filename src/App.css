@@ -297,7 +297,7 @@ textarea {
   position: relative;
   display: grid;
   place-items: center;
-  width: 122px;
+  width: min(122px, calc((100% - 56px) / 5));
   min-height: 198px;
   padding: 18px 12px;
   border: 4px solid var(--plum);
@@ -341,6 +341,39 @@ textarea {
 .book-3 {
   min-height: 224px;
   background: #2b9f91;
+}
+
+.book-4 {
+  min-height: 204px;
+  background: #4f6459;
+}
+
+.book-5 {
+  min-height: 208px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, transparent 0 73%, rgba(255, 250, 240, 0.22) 73% 80%, transparent 80%),
+    linear-gradient(180deg, #ff8f70 0 47%, var(--gold) 47% 59%, #37bfae 59% 100%);
+}
+
+.book-5::before {
+  position: absolute;
+  top: 24px;
+  left: 18px;
+  width: 34px;
+  height: 34px;
+  border: 4px solid var(--plum);
+  content: '';
+  background: var(--cream);
+  box-shadow:
+    0 0 0 6px rgba(255, 215, 106, 0.78),
+    12px 48px 0 -8px var(--paper),
+    32px 56px 0 -10px rgba(255, 250, 240, 0.72);
+}
+
+.book-5 .book-label {
+  max-width: 5.2rem;
+  font-size: 0.92rem;
 }
 
 .book-stripe {
@@ -723,13 +756,15 @@ textarea {
   }
 
   .pixel-book {
-    width: 104px;
+    width: min(104px, calc((100% - 40px) / 5));
     min-height: 178px;
   }
 
   .book-1,
   .book-2,
-  .book-3 {
+  .book-3,
+  .book-4,
+  .book-5 {
     min-height: 178px;
   }
 }
@@ -776,7 +811,9 @@ textarea {
   .pixel-book,
   .book-1,
   .book-2,
-  .book-3 {
+  .book-3,
+  .book-4,
+  .book-5 {
     width: 100%;
     min-height: 74px;
   }
