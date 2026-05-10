@@ -25,6 +25,20 @@ test('opens page content when a live mode book is selected', () => {
   expect(window.location.hash).toBe('#/inside-jazs-mind');
 });
 
+test('embeds Jaz in Summer social videos', () => {
+  render(<App wipMode={false} />);
+
+  fireEvent.click(screen.getByRole('button', { name: /jaz in summer/i }));
+
+  expect(screen.getByRole('heading', { name: /jaz in summer/i })).toBeInTheDocument();
+  expect(screen.getAllByTitle(/embedded instagram video/i)).toHaveLength(5);
+  expect(screen.getByTitle(/summer 25\/26 embedded instagram video/i)).toHaveAttribute(
+    'src',
+    'https://www.instagram.com/reel/DVesnPwk9Fo/embed',
+  );
+  expect(screen.getAllByRole('link', { name: /watch on facebook/i })).toHaveLength(2);
+});
+
 test('keeps page content closed when WIP mode is on', () => {
   render(<App wipMode />);
 

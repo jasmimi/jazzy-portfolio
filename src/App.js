@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import JazSpottingsPage from './pages/JazSpottingsPage';
 import InsideJazMindPage from './pages/InsideJazMindPage';
 import OthersMindsPage from './pages/OthersMindsPage';
+import JazInSummerPage from './pages/JazInSummerPage';
 import { isWipMode } from './siteConfig';
 
 const routeItems = [
@@ -40,6 +41,14 @@ const routeItems = [
     shadowColor: '#2b372e',
     lean: 0.8,
   },
+  {
+    label: "Jaz in Summer",
+    path: '/jaz-in-summer',
+    component: JazInSummerPage,
+    color: '#8a5a4c',
+    shadowColor: '#5c3a2f',
+    lean: 0,
+  }
 ];
 
 const routes = routeItems.reduce((routeMap, route) => {
